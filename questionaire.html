@@ -30,11 +30,11 @@
       }
       .text-section{
         width: calc(100% - 140px);
-        display: inline-block;
+        display: inline-block !important;
       }
       .radio-section{
         width: 140px;
-        display: inline-block;
+        display: inline-block !important;
       }
       button{
         font-size: 20px !important;
@@ -42,19 +42,23 @@
       }
       img{
         width: 250px;
+        margin-bottom: 30px;
       }
     </style>
   </head>
   <body>
-    <div id="q-sections" class="container">
+    <div class='yield'>
+      <div id="q-sections" class="container">
 
+      </div>
+      <div style='text-align: center'>
+        <button class='btn btn-warning'>결과 보기</button>
+      </div>
+      <div style="text-align: center;">
+        <img src='./images/logo.png'/>
+      </div>
     </div>
-    <div style='text-align: center'>
-      <button class='btn btn-warning'>결과 보기</button>
-    </div>
-    <div style="text-align: center;">
-      <img src='./images/logo.png'/>
-    </div>
+
     <script src='index.js'></script>
     <script>
       $(document).ready(function(){
