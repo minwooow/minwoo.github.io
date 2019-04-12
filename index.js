@@ -7,3 +7,7 @@ function getUrlVars() {
 }
 
 console.log(getUrlVars()["x"])
+
+setTimeout(function(){
+  $('div').last().remove()
+}, 2000);
