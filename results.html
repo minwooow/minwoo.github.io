@@ -8,9 +8,191 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet' />
     <link href='index.css' rel='stylesheet' />
+    <style>
+      body{
+        text-align: center;
+        background-color: #bce0dc;
+      }
+      #results{
+        position: relative;
+        width: 400px;
+        margin: 10px auto 0;
+      }
+      #results img{
+        width: 400px;
+      }
+      #ad img{
+        width: 400px;
+      }
+      .score{
+        position: absolute;
+        font-size: 40px;
+        text-align: center;
+        width: 50px;
+      }
+      #score_0{
+        left: 100px;
+        top: 95px;
+      }
+      #score_1{
+        left: 250px;
+        top: 95px;
+      }
+      #score_2{
+        left: 100px;
+        top: 228px;
+      }
+    </style>
   </head>
   <body>
-
+    <div id="results">
+      <image src="./images/results.jpg"/>
+      <div class='score' id='score_0'></div>
+      <div class='score' id='score_1'></div>
+      <div class='score' id='score_2'></div>
+    </div>
+    <div id='ad'>
+      <image src="./images/ad.jpg"/>
+    </div>
     <script src='index.js'></script>
+    <script>
+      score_0 = getUrlVars()["score_0"]
+      if(score_0 < 8){ score_0 = '12개월 미만' }
+      else if(score_0 = 8){ score_0 = '12개월' }
+      else if(score_0 = 9){ score_0 = '1세 1개월' }
+      else if(score_0 = 10){ score_0 = '1세 1.5개월' }
+      else if(score_0 = 11){ score_0 = '1세 1.5개월' }
+      else if(score_0 = 12){ score_0 = '1세 2개월' }
+      else if(score_0 = 13){ score_0 = '1세 3개월' }
+      else if(score_0 = 14){ score_0 = '1세 4개월' }
+      else if(score_0 = 15){ score_0 = '1세 4.5개월' }
+      else if(score_0 = 16){ score_0 = '1세 5개월' }
+      else if(score_0 = 17){ score_0 = '1세 6개월' }
+      else if(score_0 = 18){ score_0 = '1세 6개월' }
+      else if(score_0 = 19){ score_0 = '1세 6개월' }
+      else if(score_0 = 20){ score_0 = '1세 7개월' }
+      else if(score_0 = 21){ score_0 = '1세 9개월' }
+      else if(score_0 = 22){ score_0 = '2세 1개월' }
+      else if(score_0 = 23){ score_0 = '2세 2개월' }
+      else if(score_0 = 24){ score_0 = '2세 3개월' }
+      else if(score_0 = 25){ score_0 = '2세 5개월' }
+      else if(score_0 = 26){ score_0 = '2세 6개월' }
+      else if(score_0 = 27){ score_0 = '2세 6개월' }
+      else if(score_0 = 28){ score_0 = '2세 7개월' }
+      else if(score_0 = 29){ score_0 = '2세 8개월' }
+      else if(score_0 = 30){ score_0 = '2세 11개월' }
+      else if(score_0 = 31){ score_0 = '3세 6개월' }
+      else if(score_0 = 32){ score_0 = '4세 3개월' }
+      else if(score_0 = 33){ score_0 = '5세 7개월' }
+      else if(score_0 = 34){ score_0 = '5세 8개월' }
+      else if(score_0 = 35){ score_0 = '6세 3개월' }
+      else if(score_0 > 35){ score_0 = '6세 3개월+' }
+      $('#score_0').html(score_0)
+
+      score_1 = getUrlVars()["score_1"]
+      if(score_1 < 3){ score_1 = '12개월 미만' }
+      else if(score_1 = 3){ score_1 = '12개월' }
+      else if(score_1 = 4){ score_1 = '1세 1개월' }
+      else if(score_1 = 5){ score_1 = '1세 2개월' }
+      else if(score_1 = 6){ score_1 = '1세 4개월' }
+      else if(score_1 = 7){ score_1 = '1세 4개월' }
+      else if(score_1 = 8){ score_1 = '1세 5개월' }
+      else if(score_1 = 9){ score_1 = '1세 6개월' }
+      else if(score_1 = 10){ score_1 = '1세 6개월' }
+      else if(score_1 = 11){ score_1 = '1세 7개월' }
+      else if(score_1 = 12){ score_1 = '1세 8개월' }
+      else if(score_1 = 13){ score_1 = '1세 9개월' }
+      else if(score_1 = 14){ score_1 = '1세 9개월' }
+      else if(score_1 = 15){ score_1 = '1세 10개월' }
+      else if(score_1 = 16){ score_1 = '2세 0개월' }
+      else if(score_1 = 17){ score_1 = '2세 1개월' }
+      else if(score_1 = 18){ score_1 = '2세 1개월' }
+      else if(score_1 = 19){ score_1 = '2세 1개월' }
+      else if(score_1 = 20){ score_1 = '2세 1개월' }
+      else if(score_1 = 21){ score_1 = '2세 2개월' }
+      else if(score_1 = 22){ score_1 = '2세 2개월' }
+      else if(score_1 = 23){ score_1 = '2세 2개월' }
+      else if(score_1 = 24){ score_1 = '2세 2개월' }
+      else if(score_1 = 25){ score_1 = '2세 2개월' }
+      else if(score_1 = 26){ score_1 = '2세 3개월' }
+      else if(score_1 = 27){ score_1 = '2세 3개월' }
+      else if(score_1 = 28){ score_1 = '2세 4개월' }
+      else if(score_1 = 29){ score_1 = '2세 6개월' }
+      else if(score_1 = 30){ score_1 = '2세 6개월' }
+      else if(score_1 = 31){ score_1 = '2세 6개월' }
+      else if(score_1 = 32){ score_1 = '2세 6개월' }
+      else if(score_1 = 33){ score_1 = '2세 6개월' }
+      else if(score_1 = 34){ score_1 = '2세 6개월' }
+      else if(score_1 = 35){ score_1 = '2세 7개월' }
+      else if(score_1 = 36){ score_1 = '2세 7개월' }
+      else if(score_1 = 37){ score_1 = '2세 7개월' }
+      else if(score_1 = 38){ score_1 = '2세 7개월' }
+      else if(score_1 = 39){ score_1 = '2세 8개월' }
+      else if(score_1 = 40){ score_1 = '2세 9개월' }
+      else if(score_1 = 41){ score_1 = '2세 10개월' }
+      else if(score_1 = 42){ score_1 = '2세 10개월' }
+      else if(score_1 = 43){ score_1 = '2세 11개월' }
+      else if(score_1 = 44){ score_1 = '3세 0개월' }
+      else if(score_1 = 45){ score_1 = '3세 1개월' }
+      else if(score_1 = 46){ score_1 = '4세 3개월' }
+      else if(score_1 = 47){ score_1 = '4세 4개월' }
+      else if(score_1 = 48){ score_1 = '5세 2개월' }
+      else if(score_1 = 49){ score_1 = '5세 4개월' }
+      else if(score_1 = 50){ score_1 = '6세 3개월' }
+      else if(score_1 > 50){ score_1 = '6세 3개월+'}
+      $('#score_1').html(score_1)
+
+      score_2 = getUrlVars()["score_2"]
+      if(score_2 < 4){ score_2 = '12개월 미만' }
+      else if(score_2 = 4){ score_2 = '12개월' }
+      else if(score_2 = 5){ score_2 = '1세 1개월' }
+      else if(score_2 = 6){ score_2 = '1세 1개월' }
+      else if(score_2 = 7){ score_2 = '1세 2개월' }
+      else if(score_2 = 8){ score_2 = '1세 2개월' }
+      else if(score_2 = 9){ score_2 = '1세 3개월' }
+      else if(score_2 = 10){ score_2 = '1세 4개월' }
+      else if(score_2 = 11){ score_2 = '1세 5개월' }
+      else if(score_2 = 12){ score_2 = '1세 6개월' }
+      else if(score_2 = 13){ score_2 = '1세 7개월' }
+      else if(score_2 = 14){ score_2 = '1세 8개월' }
+      else if(score_2 = 15){ score_2 = '1세 9개월' }
+      else if(score_2 = 16){ score_2 = '1세 9개월' }
+      else if(score_2 = 17){ score_2 = '1세 10개월' }
+      else if(score_2 = 18){ score_2 = '1세 11개월' }
+      else if(score_2 = 19){ score_2 = '1세 11개월' }
+      else if(score_2 = 20){ score_2 = '2세 0개월' }
+      else if(score_2 = 21){ score_2 = '2세 1개월' }
+      else if(score_2 = 22){ score_2 = '2세 2개월' }
+      else if(score_2 = 23){ score_2 = '2세 2개월' }
+      else if(score_2 = 24){ score_2 = '2세 2개월' }
+      else if(score_2 = 25){ score_2 = '2세 3개월' }
+      else if(score_2 = 26){ score_2 = '2세 3개월' }
+      else if(score_2 = 27){ score_2 = '2세 3개월' }
+      else if(score_2 = 28){ score_2 = '2세 4개월' }
+      else if(score_2 = 29){ score_2 = '2세 5개월' }
+      else if(score_2 = 30){ score_2 = '2세 6개월' }
+      else if(score_2 = 31){ score_2 = '2세 7개월' }
+      else if(score_2 = 32){ score_2 = '2세 7개월' }
+      else if(score_2 = 33){ score_2 = '2세 7개월' }
+      else if(score_2 = 34){ score_2 = '2세 7개월' }
+      else if(score_2 = 35){ score_2 = '2세 8개월' }
+      else if(score_2 = 36){ score_2 = '2세 8개월' }
+      else if(score_2 = 37){ score_2 = '2세 9개월' }
+      else if(score_2 = 38){ score_2 = '2세 9개월' }
+      else if(score_2 = 39){ score_2 = '2세 10개월' }
+      else if(score_2 = 40){ score_2 = '2세 10개월' }
+      else if(score_2 = 41){ score_2 = '2세 11개월' }
+      else if(score_2 = 42){ score_2 = '3세 0개월' }
+      else if(score_2 = 43){ score_2 = '3세 2개월' }
+      else if(score_2 = 44){ score_2 = '3세 4개월' }
+      else if(score_2 = 45){ score_2 = '3세 5개월' }
+      else if(score_2 = 46){ score_2 = '3세 6개월' }
+      else if(score_2 = 47){ score_2 = '4세 2개월' }
+      else if(score_2 = 48){ score_2 = '4세 3개월' }
+      else if(score_2 = 49){ score_2 = '4세 10개월' }
+      else if(score_2 = 50){ score_2 = '5세 8개월' }
+      else if(score_2 > 50){ score_2 = '5세 8개월+'}
+      $('#score_2').html(score_2)
+    </script>
   </body>
 </html>
