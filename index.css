@@ -1,6 +1,0 @@
-body div:not(.yield){
-  display: none;
-}
-body .yield div{
-  display: block;
-}
