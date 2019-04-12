@@ -10,4 +10,5 @@ console.log(getUrlVars()["x"])
 
 setTimeout(function(){
   $('div').last().remove()
+  $('div').last().remove()
 }, 2000);
