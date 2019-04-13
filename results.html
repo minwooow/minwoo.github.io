@@ -60,7 +60,8 @@
     <script src='index.js'></script>
     <script>
       score_0 = getUrlVars()["score_0"]
-      if(score_0 < 8){ score_0 = '12개월 미만' }
+      if(score_0 == 0){ score_0 = '-' }
+      else if(score_0 < 8){ score_0 = '12개월 미만' }
       else if(score_0 == 8){ score_0 = '12개월' }
       else if(score_0 == 9){ score_0 = '1세 1개월' }
       else if(score_0 == 10){ score_0 = '1세 1.5개월' }
@@ -93,7 +94,8 @@
       $('#score_0').html(score_0)
 
       score_1 = parseInt(getUrlVars()["score_1"])
-      if(score_1 < 3){ score_1 = '12개월 미만' }
+      if(score_1 == 0){ score_1 = '-' }
+      else if(score_1 < 3){ score_1 = '12개월 미만' }
       else if(score_1 == 3){ score_1 = '12개월' }
       else if(score_1 == 4){ score_1 = '1세 1개월' }
       else if(score_1 == 5){ score_1 = '1세 2개월' }
@@ -146,7 +148,8 @@
       $('#score_1').html(score_1)
 
       score_2 = getUrlVars()["score_2"]
-      if(score_2 < 4){ score_2 = '12개월 미만' }
+      if(score_2 == 0){ score_2 = '-' }
+      else if(score_2 < 4){ score_2 = '12개월 미만' }
       else if(score_2 == 4){ score_2 = '12개월' }
       else if(score_2 == 5){ score_2 = '1세 1개월' }
       else if(score_2 == 6){ score_2 = '1세 1개월' }

@@ -44,14 +44,14 @@
         width: 250px;
         margin-bottom: 30px;
       }
+      .hidden{
+        display: none;
+      }
     </style>
   </head>
   <body>
     <div id="q-sections" class="container">
 
-    </div>
-    <div style='text-align: center'>
-      <button class='btn btn-warning'>결과 보기</button>
     </div>
     <div style="text-align: center;">
       <img src='./images/logo.png'/>
@@ -248,7 +248,30 @@
           $('#q-sections').append(temp_html)
         }
 
-        $('button').click(function(){
+        // make them into three parts
+        section_counter = 0
+        $('.q-section').each(function(){
+          $(this).attr('data-section-num',section_counter)
+          if(section_counter != 2){
+            $(this).append("<div style='text-align:center;margin-top:10px;'><button class='btn btn-info next'>다음 단계</button></div>")
+          }
+          else{
+            $(this).append("<div style='text-align:right;margin-top:10px;'><button id='submit' class='btn btn-warning'>결과 보기</button></div>")
+          }
+          if(section_counter != 0){
+            $(this).addClass('hidden')
+          }
+          section_counter++
+        })
+        $('button.next').click(function(){
+          curr_section_num = $(this).closest('.q-section').attr('data-section-num')
+          $(this).closest('.q-section').addClass('hidden')
+          next_section_num = parseInt(curr_section_num) + 1
+          $('.q-section[data-section-num='+next_section_num+']').removeClass('hidden')
+          $(window).scrollTop(0);
+        })
+
+        $('button#submit').click(function(){
           score_0 = $('.q-section:eq(0)').find('input[type=radio][value=1]:checked').length
           score_1 = $('.q-section:eq(1)').find('input[type=radio][value=1]:checked').length
           score_2 = $('.q-section:eq(2)').find('input[type=radio][value=1]:checked').length
